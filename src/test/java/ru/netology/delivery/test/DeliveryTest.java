@@ -28,15 +28,15 @@ class DeliveryTest {
     void shouldSuccessfulPlanAndReplanMeeting() {
         DataGenerator.UserInfo validUser = DataGenerator.Registration.generateUser("ru");
         int daysToAddForFirstMeeting = 4;
-        String firstMeetingDate = generateDate(daysToAddForFirstMeeting,"dd.mm.yyyy");
+        String firstMeetingDate = generateDate(daysToAddForFirstMeeting, "dd.mm.yyyy");
         int daysToAddForSecondMeeting = 7;
-        String secondMeetingDate = generateDate(daysToAddForSecondMeeting,"dd.mm,yyyy");
+        String secondMeetingDate = generateDate(daysToAddForSecondMeeting, "dd.mm,yyyy");
         $("[data-test-id='city'] input").setValue(validUser.getCity());
         String currentDate = generateDate(7, "dd.MM.yyyy");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").setValue(firstMeetingDate);
-        $("[data-test-id='name'] input").setValue (validUser.getName());
-        $("[data-test-id='phone'] input").setValue(validUser.getPhone);
+        $("[data-test-id='name'] input").setValue(validUser.getName());
+        $("[data-test-id='phone'] input").setValue(validUser.getPhone());
         $("[data-test-id='agreement'] .checkbox__box").click();
         $("button.button").click();
         $(byText("Запланировать")).click();
@@ -58,8 +58,7 @@ class DeliveryTest {
     }
 
 
-
-
+}
 
 
 
@@ -68,5 +67,5 @@ class DeliveryTest {
         // firstMeetingDate и secondMeetingDate. Можно также вызывать методы generateCity(locale),
         // generateName(locale), generatePhone(locale) для генерации и получения в тесте соответственно города,
         // имени и номера телефона без создания пользователя в методе generateUser(String locale) в датагенераторе
-    }
-}
+
+
