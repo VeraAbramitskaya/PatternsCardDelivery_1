@@ -14,6 +14,9 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static ru.netology.delivery.data.DataGenerator.generateDate;
+import io.qameta.allure.selenide.AllureSelenide;
+
+
 
 class DeliveryTest {
 
