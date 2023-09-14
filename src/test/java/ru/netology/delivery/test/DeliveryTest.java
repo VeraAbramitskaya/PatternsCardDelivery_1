@@ -14,19 +14,19 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static ru.netology.delivery.data.DataGenerator.generateDate;
-import io.qameta.allure.selenide.AllureSelenide;
 
+import io.qameta.allure.selenide.AllureSelenide;
 
 
 class DeliveryTest {
 
     @BeforeAll
-    static void setUpAll(){
+    static void setUpAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
     @AfterAll
-    static void tearDownAll(){
+    static void tearDownAll() {
         SelenideLogger.removeListener("allure");
     }
 
@@ -73,11 +73,10 @@ class DeliveryTest {
 }
 
 
-
-        // TODO: добавить логику теста в рамках которого будет выполнено планирование и перепланирование встречи.
-        // Для заполнения полей формы можно использовать пользователя validUser и строки с датами в переменных
-        // firstMeetingDate и secondMeetingDate. Можно также вызывать методы generateCity(locale),
-        // generateName(locale), generatePhone(locale) для генерации и получения в тесте соответственно города,
-        // имени и номера телефона без создания пользователя в методе generateUser(String locale) в датагенераторе
+// TODO: добавить логику теста в рамках которого будет выполнено планирование и перепланирование встречи.
+// Для заполнения полей формы можно использовать пользователя validUser и строки с датами в переменных
+// firstMeetingDate и secondMeetingDate. Можно также вызывать методы generateCity(locale),
+// generateName(locale), generatePhone(locale) для генерации и получения в тесте соответственно города,
+// имени и номера телефона без создания пользователя в методе generateUser(String locale) в датагенераторе
 
 
